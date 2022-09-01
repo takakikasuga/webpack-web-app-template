@@ -1,0 +1,43 @@
+@use 'contents.scss';
+
+$color-primary: red;
+
+.heading {
+  color: #000000;
+  background: $color-primary;
+  text-align: center;
+  line-clamp: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-size-adjust: 'none';
+  -moz-text-size-adjust: 'none';
+  -ms-text-size-adjust: 'none';
+  text-size-adjust: 'none';
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+      "aside header"
+      "aside main"
+      "aside footer";
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
